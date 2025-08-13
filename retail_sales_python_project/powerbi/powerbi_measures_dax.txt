@@ -1,0 +1,21 @@
+
+-- Save as measures in Power BI
+
+Total Revenue = SUM(sales[TotalRevenue])
+
+Orders = DISTINCTCOUNT(sales[OrderID])
+
+AOV = DIVIDE([Total Revenue], [Orders])
+
+Revenue by Region = SUMMARIZE(sales, sales[Region], "Revenue", [Total Revenue])
+
+Revenue by Category = SUMMARIZE(sales, sales[ProductCategory], "Revenue", [Total Revenue])
+
+-- Time intelligence (assuming a Date table named 'Date' related to sales[OrderDate])
+Revenue MTD = TOTALMTD([Total Revenue], 'Date'[Date])
+Revenue QTD = TOTALQTD([Total Revenue], 'Date'[Date])
+Revenue YTD = TOTALYTD([Total Revenue], 'Date'[Date])
+
+-- Last year comparison
+Revenue LY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Date'[Date]))
+Revenue YoY % = DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY])

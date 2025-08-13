@@ -1,0 +1,29 @@
+{
+  "name": "Retail Clean",
+  "textClasses": {
+    "title": {
+      "fontSize": 16,
+      "fontFace": "Segoe UI Semibold"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI"
+    },
+    "callout": {
+      "fontSize": 22,
+      "fontFace": "Segoe UI Semibold"
+    }
+  },
+  "visualStyles": {},
+  "dataColors": [
+    "#4C78A8",
+    "#F58518",
+    "#E45756",
+    "#72B7B2",
+    "#54A24B",
+    "#EECA3B",
+    "#B279A2"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#2B2B2B"
+}
