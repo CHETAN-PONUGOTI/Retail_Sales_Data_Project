@@ -39,3 +39,27 @@ This is useful for:
 
 ---
 
+
+retail_sales_analytics/      # Python package
+  __init__.py
+  config.py
+  data_prep.py
+  eda.py
+  modeling.py
+  plotting.py
+data/
+  retail_sales_data.csv
+outputs/                     # Generated plots + forecast csv
+sql/
+  sql_queries.sql
+powerbi/
+  powerbi_measures_dax.txt
+  powerbi_theme.json
+  powerbi_report_setup.md
+tests/
+  test_basic.py
+scripts/
+  run.sh
+requirements.txt
+README.md
+
